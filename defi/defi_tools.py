@@ -77,6 +77,7 @@ def compare(days, var_A=0, var_B=0, rw_pool_A=0, rw_pool_B=0, rw_pool_AB=0, fees
 ######################################################################
 
 
+
 def getProtocols():
     """Get list all DeFi protocols across all blockchains
     
@@ -103,7 +104,7 @@ def getProtocol(protocol):
     url = f"https://api.llama.fi/protocol/{protocol}"
     r = requests.get(url)
     r_json = r.json()
-
+    print(protocol)
     df = pd.DataFrame(r_json['tvl'])
     df.date = pd.to_datetime(df.date, unit='s')
     df = df.set_index('date')
