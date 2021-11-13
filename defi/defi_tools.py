@@ -5,7 +5,6 @@ import pandas as pd
 import numpy as np
 import datetime, requests
 from scipy import interpolate
-import matplotlib.cm as cm
 from matplotlib.gridspec import GridSpec
 
 
